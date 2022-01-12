@@ -15,7 +15,10 @@ BootStrap NavBar Example Three - Social Media Icons
     <nav
       class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top"
     >
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-toggle
+        class="float-right"
+        target="nav-collapse"
+      ></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -42,7 +45,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
               </g>
             </g>
           </svg>
-          <span class="mt-3 font-weight-bold">Keltech</span>
+          <span class="mt-3 font-weight-bold">Kieltec</span>
         </a>
 
         <ul class="navbar-nav ml-auto pl-lg-4">
@@ -108,7 +111,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
     <!--The html below this line is for display purpose only-->
 
-    <div class="py-5 text-center text-white bg-primary">
+    <!--<div class=" about py-5 text-center text-white bg-primary" >
       <div class="container py-5">
         <div class="row py-5">
           <div class="mx-auto col-lg-10">
@@ -126,10 +129,22 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
           </div>
         </div>
       </div>
+    </div> -->
+    <div class="home">
+      <video src="../assets/video1.mp4" loop="true" autoplay="true" height="100%" width="100%">
+      </video>
+    
     </div>
+    
   </div>
+  
 </template>
 <script>
 </script>
 <style>
+.home {
+  background-image: url("../assets/video1.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 </style>

@@ -1,12 +1,12 @@
 <template lang="">
 
   <div>
-    <div>
-  <b-navbar  toggleable="lg" type="light" style=" background:white " >   
-    <b-navbar-toggle class="ml-5" target="nav-collapse" right></b-navbar-toggle>
+   <nav
+     class="navbar navbar-expand-lg  bg-dark  shadow-sm bg-light fixed-top"
+    >
+      <b-navbar-toggle style="color:white;" target="nav-collapse"></b-navbar-toggle>
 
-    <b-collapse  id="nav-collapse" is-nav>
-      <b-navbar-nav class="mx-auto text-center d-flex text-light">
+      <b-collapse   id="nav-collapse" is-nav>
         <a class="navbar-brand d-flex align-items-center" href="#">
           <svg
             width="40px"
@@ -31,51 +31,69 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
               </g>
             </g>
           </svg>
-          <span class="ml-3 font-weight-bold mr-5">Keltech </span>
+          <span class="mt-3 font-weight-bold text-light">Kieltec</span>
         </a>
-        <b-nav-item class="mt-2 " to="/" >Home</b-nav-item>
-        <b-nav-item  class="mt-2" to="/about">About</b-nav-item>
-        <b-nav-item  class="mt-2" to="/Service">Service</b-nav-item>
-         <b-nav-item  class="mt-2" to="/our Work">Our work</b-nav-item>
-        <b-nav-item  class="mt-2" to="/contact">Contact</b-nav-item>
-        <b-nav-item  v-if="isLogin" :to="{ path: '/Taskboard' }" >Tasboard</b-nav-item>
 
-        
-      </b-navbar-nav>
+        <ul class="navbar-nav ml-auto pl-lg-4">
+          <li class="nav-item px-lg-2 active">
+            <a style="color:white;" class="nav-link" href="#">
+              <span  class="d-inline-block d-lg-none icon-width"
+                ><i  class="fas fa-home bg-light"></i></span
+              ><span class="ml-3 text-light">Home</span></a
+            >
+          </li>
+          <li class="nav-item px-lg-2">
+            <a style="color:white;"  class="nav-link" href="#"
+              ><span class="d-inline-block d-lg-none icon-width"
+                ><i class="fas fa-spa"></i></span
+              ><span class="ml-3 text-light">Services</span></a
+            >
+          </li>
+          <li class="nav-item px-lg-2">
+            <a style="color:white;" class="nav-link" href="#"
+              ><span class="d-inline-block d-lg-none icon-width"
+                ><i class="far fa-user"></i></span
+              ><span class="ml-3 ">About</span></a
+            >
+          </li>
 
-      <!-- Right aligned nav items -->
-      <b-navbar-nav class="ml-auto ">
-       <ul class="navbar-nav ml-auto mr-3 ">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fab fa-twitter"></i
-                >
-                
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fab fa-facebook"></i
-                >
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fab fa-instagram"></i
-                >
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fab fa-linkedin"></i
-                >
-              </a>
-            </li>
-          </ul>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
-</div>
+          <li class="nav-item px-lg-2">
+            <a style="color:white;" class="nav-link" href="#"
+              ><span class="d-inline-block d-lg-none icon-width"
+                ><i  class="far fa-envelope"></i
+              ></span>
+              <span class="ml-3 ">Contact</span></a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
+          <li class="nav-item">
+            <a style="color:white;" class="nav-link" href="#">
+              <i class="fab fa-twitter"></i
+              ><span class="d-lg-none ml-3 ">Twitter</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a style="color:white;" class="nav-link" href="#">
+              <i class="fab fa-facebook"></i
+              ><span class="d-lg-none ml-3 ">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a style="color:white;" class="nav-link" href="#">
+              <i class="fab fa-instagram"></i
+              ><span class="d-lg-none ml-3 ">Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a style="color:white;"  class="nav-link" href="#">
+              <i class="fab fa-linkedin"></i
+              ><span class="d-lg-none ml-3 ">Linkedin</span>
+            </a>
+          </li>
+        </ul>
+      </b-collapse>
+    </nav>
   </div>
 </template>
 <script>
@@ -105,4 +123,8 @@ export default {
 };
 </script>
 <style >
+nav {
+  
+  color:white;
+}
 </style>
