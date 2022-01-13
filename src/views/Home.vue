@@ -1,17 +1,6 @@
 <template>
   <div>
-    <!--
-
-BootStrap NavBar Example Three - Social Media Icons
- //
-1. Replaced the ugly toggle with angle
-2. Used hover only for large screen and above
-3. You can add resize function if you want in javascript
-4. SlideIn / SlideUp can be replaced with FadeIn /FadeUp
-5. Delay on leaving mouse is applied to ensure the hover actions are not jittery.
-//
--->
-
+ 
     <nav
       class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top"
     >
@@ -109,32 +98,19 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
       </b-collapse>
     </nav>
 
-    <!--The html below this line is for display purpose only-->
-
-    <!--<div class=" about py-5 text-center text-white bg-primary" >
-      <div class="container py-5">
-        <div class="row py-5">
-          <div class="mx-auto col-lg-10">
-            <h1 class="display-4 mb-4">
-              This is a beautiful Bootstrap 4 Navbar with Social Media Icons
-            </h1>
-            <p class="lead mb-5">
-              There is nothing more rare, nor more beautiful, than a woman being
-              unapologetically herself; comfortable in her perfect imperfection.
-              To me, that is the true essence of beauty.
-            </p>
-            <a href="#" class="btn btn-lg btn-outline-light mx-1"
-              >Take me there</a
-            >
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <div class="home">
-      <video src="../assets/video1.mp4" loop="true" autoplay="true" height="100%" width="100%">
-      </video>
+ 
+<div class="row-hero">
+    <video class="video" poster="../assets/video1.mp4" height="" autoplay playsinline muted loop>
+      <source src="../assets/video1.mp4" type="video/webm">
+    </video>
+	<div class="video-quote">
     
-    </div>
+    <div class="cointainer">
+  <h1>Welcome to Kieltec Repairs</h1>
+  <p>I'm here to repair</p>
+</div>
+  </div>
+</div>
     
   </div>
   
@@ -142,9 +118,118 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 <script>
 </script>
 <style>
-.home {
-  background-image: url("../assets/video1.gif");
-  background-repeat: no-repeat;
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap");
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+  background: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.row-hero {
+  margin-top: 10px;
+	height: 50rem;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+	@media(min-width: 480px) {
+		.row-hero {
+			height: 25rem;
+		}
+	}
+	@media(min-width: 720px) {
+		.row-hero {
+			height: 35rem;
+		}
+	}
+
+.video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: auto;
+	width: auto;
+  background-size:cover ;
+	z-index: -1;
+	transform: translateX(-50%) translateY(-80%);
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.video-quote {
+  z-index: 1;
+  padding-top:200px ;
+  width:100%;
+  height:100%;
+	color: #fff;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+	background-color: rgba(0, 0, 0, 0.6);
   background-size: cover;
+  margin: auto;
+}
+
+
+.cointainer {
+  padding-inline: 2em;
+}
+h1 {
+  font-family: "Source Code Pro", monospace;
+  white-space: nowrap;
+  font-size: min(3rem, 7vw);
+  margin-bottom: 1em;
+  font-weight: 600;
+  position: relative;
+}
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+h1::before {
+  background-color: whitesmoke;
+  animation: typewriter 4s 1s steps(25) forwards;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+}
+h1::after {
+  width: 0.1em;
+  background-color: #333;
+  opacity: 0;
+  animation: typewriter 4s 1s steps(25) forwards, blinker 500ms ease infinite;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3em);
+  animation: fader 1s ease-in 5s forwards;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blinker {
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes fader {
+  to {
+    opacity: 100;
+    transform: translateY(0);
+  }
 }
 </style>
