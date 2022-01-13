@@ -106,7 +106,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 	<div class="video-quote">
     
     <div class="cointainer">
-  <h1>Welcome to Kieltec Repairs</h1>
+  <h2>Welcome to Kieltec Repairs</h2>
   <p>I'm here to repair</p>
 </div>
   </div>
@@ -124,36 +124,28 @@ html, body {
 	padding: 0;
 	font-family: Arial;
 
+ 
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
 .row-hero {
-  margin-top: 10px;
-	height: 50rem;
+  border:1px solid black;
+	height: 70rem;
 	width: 100%;
 	position: relative;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
-	align-items: flex-end;
+
 }
-	@media(min-width: 480px) {
-		.row-hero {
-			height: 25rem;
-		}
-	}
-	@media(min-width: 720px) {
-		.row-hero {
-			height: 35rem;
-		}
-	}
+	
 
 .video {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	height: auto;
+	height: 1400px;
 	width: auto;
   background-size:cover ;
 	z-index: -1;
@@ -163,24 +155,23 @@ html, body {
 }
 
 .video-quote {
-  z-index: 1;
+
   padding-top:200px ;
   width:100%;
-  height:100%;
-	color: #fff;
+  height:75%;;
+	color:white;
   justify-content: center;
-  display: flex;
   text-align: center;
 	background-color: rgba(0, 0, 0, 0.6);
   background-size: cover;
-  margin: auto;
+
 }
 
 
 .cointainer {
   padding-inline: 2em;
 }
-h1 {
+h2 {
   font-family: "Source Code Pro", monospace;
   white-space: nowrap;
   font-size: min(3rem, 7vw);
@@ -188,19 +179,19 @@ h1 {
   font-weight: 600;
   position: relative;
 }
-h1::before,
-h1::after {
+h2::before,
+h2::after {
   content: "";
   position: absolute;
   inset: 0;
 }
-h1::before {
+h2::before {
   background-color: whitesmoke;
   animation: typewriter 4s 1s steps(25) forwards;
   animation: name duration timing-function delay iteration-count direction
     fill-mode;
 }
-h1::after {
+h2::after {
   width: 0.1em;
   background-color: #333;
   opacity: 0;
