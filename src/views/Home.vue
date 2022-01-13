@@ -106,7 +106,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 	<div class="video-quote">
     
     <div class="cointainer">
-  <h2>Welcome to Kieltec Repairs</h2>
+  <h2>Welcome to Kieltec </h2>
   <p>I'm here to repair</p>
 </div>
   </div>
