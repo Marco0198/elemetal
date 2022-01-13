@@ -156,7 +156,7 @@ html, body {
 
 .video-quote {
 
-  padding-top:200px ;
+  padding-top:350px ;
   width:100%;
   height:75%;;
 	color:white;
