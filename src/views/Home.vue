@@ -158,7 +158,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial;
-  background: black;
+  background: white;
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
