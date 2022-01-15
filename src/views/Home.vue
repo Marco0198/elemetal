@@ -96,7 +96,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         </ul>
       </b-collapse>
     </nav>
-
+<section>
     <div class="row-hero">
       <video
         class="video"
@@ -116,9 +116,11 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         </div>
       </div>
     </div>
+    </section>
+    <section>
     <!-- /.row about section -->
-    <div class="container">
-      <h1 class="text-center display-4 mb-5">About us</h1>
+    <div class="container ">
+      <h1 class="text-center display-4 ">About <span  style="color: #73caef"> us </span></h1>
       <!-- /.row -->
 
       <!--  image right  -->
@@ -148,10 +150,24 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
       </div>
       <!-- /.row -->
     </div>
+    </section>
+   
+      <Service />
+      <Contact />
+   
   </div>
 </template>
 <script>
+
+import Service from "@/components/Service.vue"
+import Contact from "@/components/Contact.vue"
+export default {
+  components: { Service,Contact
+    }
+  }
+
 </script>
+
 <style >
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap");
 body {
@@ -163,12 +179,13 @@ body {
 }
 
 .row-hero {
-  height: 60rem;
+  height: 50rem;
   width: 100%;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  
 }
 
 .video {
@@ -185,9 +202,9 @@ body {
 }
 
 .video-quote {
-  padding-top: 350px;
+  padding-top: 250px;
   width: 100%;
-  height: 79%;
+  height: 85%;
   color: white;
   justify-content: center;
   text-align: center;
