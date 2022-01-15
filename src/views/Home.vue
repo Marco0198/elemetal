@@ -159,8 +159,7 @@ body {
   padding: 0;
   font-family: Arial;
   background: white;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+
 }
 
 .row-hero {
