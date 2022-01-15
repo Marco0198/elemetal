@@ -14,9 +14,10 @@ export default {
     };
   },
 };
-</script>>
-<style lang="scss" >
+</script>
+<style >
 body {
+  background-color:red;
   background-attachment: fixed;
   margin: 0;
 }

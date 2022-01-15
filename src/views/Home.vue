@@ -1,6 +1,5 @@
 <template>
   <div>
- 
     <nav
       class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top"
     >
@@ -98,75 +97,104 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
       </b-collapse>
     </nav>
 
- 
-<div class="row-hero">
-    <video class="video" poster="../assets/video1.mp4" height="" autoplay playsinline muted loop>
-      <source src="../assets/video1.mp4" type="video/webm">
-    </video>
-	<div class="video-quote">
-    
-    <div class="cointainer">
-  <h2>Welcome to Kieltec </h2>
-  <p>I'm here to repair</p>
-</div>
+    <div class="row-hero">
+      <video
+        class="video"
+        poster="../assets/video1.mp4"
+        height=""
+        autoplay
+        playsinline
+        muted
+        loop
+      >
+        <source src="../assets/video1.mp4" type="video/webm" />
+      </video>
+      <div class="video-quote">
+        <div class="home cointainer lead">
+          <h2>Welcome to Kieltec</h2>
+          <p>I'm here to repair</p>
+        </div>
+      </div>
+    </div>
+    <!-- /.row about section -->
+    <div class="container">
+      <h1 class="text-center display-4 mb-5">About us</h1>
+      <!-- /.row -->
+
+      <!--  image right  -->
+      <div class="row">
+        <div class="col-md-6 order-md-6">
+          <img src="../assets/repair.gif" alt="" class="w-100" />
+        </div>
+        <!-- /.col-md-6 -->
+        <div class="col-md-6 order-md-1">
+          <div class="row align-items-center h-100">
+            <div class="col">
+              <p class="lead mb-5">
+                Founded in 2010, with over 20 000 and counting consoles repaired
+                coming from all over Africa and overseas , KIELTEC is still
+                going strong, we specialise in Sony Playstation and Microsoft
+                Xbox Consoles however other devices are welcome too :). Bga
+                rework otherwise known as reballing is one of the complicated
+                fix in electronics but we manage to master it and do it on site
+                with our 3 Zone Bga Rework Station please check our youtube
+                channel. we have the fastest turn around time not because we do
+                our repairs fast but properly. <br /><br />
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-6 -->
+      </div>
+      <!-- /.row -->
+    </div>
   </div>
-</div>
-    
-  </div>
-  
 </template>
 <script>
 </script>
-<style>
+<style >
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap");
-html, body {
-	margin: 0;
-	padding: 0;
-	font-family: Arial;
-
- 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  background: black;
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
 .row-hero {
-  border:1px solid black;
-	height: 70rem;
-	width: 100%;
-	position: relative;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-
+  height: 60rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
-	
 
 .video {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	height: 1400px;
-	width: auto;
-  background-size:cover ;
-	z-index: -1;
-	transform: translateX(-50%) translateY(-80%);
-	min-width: 100%;
-	min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 1400px;
+  width: auto;
+  background-size: cover;
+  z-index: -1;
+  transform: translateX(-50%) translateY(-80%);
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .video-quote {
-
-  padding-top:350px ;
-  width:100%;
-  height:75%;;
-	color:white;
+  padding-top: 350px;
+  width: 100%;
+  height: 79%;
+  color: white;
   justify-content: center;
   text-align: center;
-	background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   background-size: cover;
-
 }
-
 
 .cointainer {
   padding-inline: 2em;
@@ -197,7 +225,7 @@ h2::after {
   opacity: 0;
   animation: typewriter 4s 1s steps(25) forwards, blinker 500ms ease infinite;
 }
-p {
+.home p {
   font-size: 1.5rem;
   font-weight: 400;
   opacity: 0;
