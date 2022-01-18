@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        <section>
+        <section >
        <div class="container my-5">
     
         <div class="text-center mb-5 col-md-10 mx-auto">
@@ -178,7 +178,10 @@
     </div>
 </template>
 <script>
-export default {};
+
+export default {
+  props: ['id']
+};
 </script>
 <style >
 </style>

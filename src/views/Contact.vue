@@ -1,12 +1,14 @@
 <template>
   <Layout name="LayoutDefault">
-    <h1>recover task page</h1>
+
+    <Contact />
+
   </Layout>
 </template>
 <script>
 import Layout from "@/layouts/Layout";
-
+import Contact from "@/components/Contact.vue"
 export default {
-  components: { Layout },
+  components: { Layout,Contact },
 };
 </script>

@@ -1,13 +1,16 @@
 <template lang="">
 
   <div>
-   <nav
-     class="navbar navbar-expand-lg  bg-dark  shadow-sm bg-light fixed-top"
+    <nav
+      class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top"
     >
-      <b-navbar-toggle style="color:white;" target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-toggle
+        class="float-right"
+        target="nav-collapse"
+      ></b-navbar-toggle>
 
-      <b-collapse   id="nav-collapse" is-nav>
-        <a class="navbar-brand d-flex align-items-center" href="#">
+      <b-collapse id="nav-collapse" is-nav>
+        <a class="navbar-brand d-flex " href="#">
           <svg
             width="40px"
             version="1.1"
@@ -31,64 +34,63 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
               </g>
             </g>
           </svg>
-          <span class="mt-3 font-weight-bold text-light">Kieltec</span>
+          <span class="mt-3 font-weight-bold">Kieltec</span>
         </a>
 
         <ul class="navbar-nav ml-auto pl-lg-4">
           <li class="nav-item px-lg-2 active">
-            <a style="color:white;" class="nav-link" href="#">
-              <span  class="d-inline-block d-lg-none icon-width"
-                ><i  class="fas fa-home bg-light"></i></span
-              ><span class="ml-3 text-light">Home</span></a
-            >
+            <b-nav-item class="nav-link" to="/">
+              <span class="d-inline-block d-lg-none icon-width"
+                ><i class="fas fa-home"></i></span
+              ><span class="ml-3">Home</span> </b-nav-item>
           </li>
           <li class="nav-item px-lg-2">
-            <a style="color:white;"  class="nav-link" href="#"
+            <b-nav-item class="nav-link  scroll" to="/service"
               ><span class="d-inline-block d-lg-none icon-width"
                 ><i class="fas fa-spa"></i></span
-              ><span class="ml-3 text-light">Services</span></a
+              ><span class="ml-3">Services</span></b-nav-item
             >
           </li>
           <li class="nav-item px-lg-2">
-            <a style="color:white;" class="nav-link" href="#"
+            <b-nav-item class="nav-link" to="/about"
               ><span class="d-inline-block d-lg-none icon-width"
                 ><i class="far fa-user"></i></span
-              ><span class="ml-3 ">About</span></a
+              ><span class="ml-3">About</span></b-nav-item
             >
           </li>
 
           <li class="nav-item px-lg-2">
-            <a style="color:white;" class="nav-link" href="#"
+            <b-nav-item class="nav-link" to="/contact"
               ><span class="d-inline-block d-lg-none icon-width"
-                ><i  class="far fa-envelope"></i
+                ><i class="far fa-envelope"></i
               ></span>
-              <span class="ml-3 ">Contact</span></a
+              <span class="ml-3">Contact</span></b-nav-item
             >
           </li>
         </ul>
         <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
           <li class="nav-item">
-            <a style="color:white;" class="nav-link" href="#">
+            <a class="nav-link" href="#">
               <i class="fab fa-twitter"></i
-              ><span class="d-lg-none ml-3 ">Twitter</span>
+              ><span class="d-lg-none ml-3">Twitter</span>
             </a>
           </li>
           <li class="nav-item">
-            <a style="color:white;" class="nav-link" href="#">
+            <a class="nav-link" href="#">
               <i class="fab fa-facebook"></i
-              ><span class="d-lg-none ml-3 ">Facebook</span>
+              ><span class="d-lg-none ml-3">Facebook</span>
             </a>
           </li>
           <li>
-            <a style="color:white;" class="nav-link" href="#">
+            <a class="nav-link" href="#">
               <i class="fab fa-instagram"></i
-              ><span class="d-lg-none ml-3 ">Instagram</span>
+              ><span class="d-lg-none ml-3">Instagram</span>
             </a>
           </li>
           <li>
-            <a style="color:white;"  class="nav-link" href="#">
+            <a class="nav-link" href="#">
               <i class="fab fa-linkedin"></i
-              ><span class="d-lg-none ml-3 ">Linkedin</span>
+              ><span class="d-lg-none ml-3">Linkedin</span>
             </a>
           </li>
         </ul>
@@ -98,29 +100,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 </template>
 <script>
 export default {
-  computed: {
-    isLogin() {
-      return this.$store.getters["login/isLogin"];
-    },
-
-    users() {
-      return JSON.parse(localStorage.getItem("user"));
-    },
-  },
-  methods: {
-    logout() {
-      this.$store.dispatch("login/logout");
-
-      return (
-        this.$store.getters["login/isLogin"],
-        this.$router.push({ path: "/login" })
-      );
-    },
-    created() {
-      this.$store.dispatch("getCurrentUser");
-    },
-  },
-};
+}
 </script>
 <style >
 nav {
