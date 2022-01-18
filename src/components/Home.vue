@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        <section>
+     
     <div class="row-hero">
       <video
         class="video"
@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    </section>
+   
     </div>
 </template>
 <script>
