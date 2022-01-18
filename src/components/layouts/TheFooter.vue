@@ -1,5 +1,5 @@
 <template lang="">
-   <footer class="footer px-4 " style="height:80px; background:black" >
+   <footer class="footer px-4 " style="height:150px; background:#071c34" >
         <div class="copyright text-center  ">
           © {{year}}
          

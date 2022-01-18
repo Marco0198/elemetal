@@ -13,8 +13,8 @@
               </div>
               <div class="contact-info-text">
                 <h3>address</h3>
-                <span>1215 Lorem Ipsum, Ch 176080 </span> 
-                <span>Chandigarh , INDIA</span> 
+                <span>Hans strijdom avenue Tulbagh centre 8th floor office 824, P.O Box 8001</span> 
+                <span>Cape Town, South Africa</span> 
               </div>
             </div>            
           </div>          
@@ -27,8 +27,10 @@
               </div>
               <div class="contact-info-text">
                 <h3>E-mail</h3>
-                <span>info@LoremIpsum.com</span> 
-                <span>yourmail@gmail.com</span>
+                <span> info@kieltec.co.za</span> 
+                <span>(+27) 072 025 8865</span> 
+                <span></span> 
+                
               </div>
             </div>            
           </div>                
@@ -37,12 +39,13 @@
           <div class="contact-info">
             <div class="contact-info-item">
               <div class="contact-info-icon">
-                <i class="fas fa-clock"></i>
+                <i class="fas fa-clock " ></i>
               </div>
               <div class="contact-info-text">
                 <h3>office time</h3>
-                <span>Mon - Thu  9:00 am - 4.00 pm</span>
-                <span>Thu - Mon  10.00 pm - 5.00 pm</span>
+                <span>Mon - Fri 9:00 am - 5:00 pm</span>
+                <span>Suturday  10:00 am - 2:00 pm</span>
+                <span>Sunday   closed</span>
               </div>
             </div>            
           </div>          
@@ -88,7 +91,7 @@
         </div>
         <div class="col-md-4">        
           <div class="contact-page-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109741.02912911311!2d76.69348873658222!3d30.73506264436677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0be66ec96b%3A0xa5ff67f9527319fe!2sChandigarh!5e0!3m2!1sen!2sin!4v1553497921355" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/@-33.9192488,18.4250213,3a,75y,71.82h,84.84t,1.56r/data=!3m6!1e1!3m4!1s1kBdJ08IbJZKmYMbxv6LLQ!2e0!7i13312!8i6656!5m1!1e4" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>          
         </div>        
       </div>
@@ -99,7 +102,7 @@
 <script>
 export default {};
 </script>
-<style >
+<style  >
 .contact-image {
   height: 170px;
   width: 100%;
@@ -159,7 +162,7 @@ section {
 .contact-info-text span {
   color: #999999;
   font-size: 16px;
- 
+
   display: inline-block;
   width: 100%;
 }

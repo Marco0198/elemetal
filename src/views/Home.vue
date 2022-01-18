@@ -38,11 +38,10 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
         <ul class="navbar-nav ml-auto pl-lg-4">
           <li class="nav-item px-lg-2 active">
-            <a class="nav-link" href="#">
+            <nav-link class="nav-link" href="#">
               <span class="d-inline-block d-lg-none icon-width"
                 ><i class="fas fa-home"></i></span
-              ><span class="ml-3">Home</span></a
-            >
+              ><span class="ml-3">Home</span> </nav-link>
           </li>
           <li class="nav-item px-lg-2">
             <a class="nav-link" href="#"
@@ -154,6 +153,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
    
       <Service />
       <Contact />
+      <TheFooter />
    
   </div>
 </template>
@@ -161,8 +161,9 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
 import Service from "@/components/Service.vue"
 import Contact from "@/components/Contact.vue"
+import TheFooter from "@/components/layouts/TheFooter.vue"
 export default {
-  components: { Service,Contact
+  components: { Service,Contact,TheFooter
     }
   }
 
