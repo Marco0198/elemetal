@@ -53,39 +53,84 @@
       </div>
       <div class="row">
         <div class="col-md-8">
-          <div class="contact-page-form" method="post">
-            <h3>Get in Touch</h3> 
-            <form action="contact-mail.php" method="post">
+          <div class="contact-page-form" >
+            <h3 class=" mb-3">Get in Touch</h3> 
+            <span class="alert alert-success mt-3 " v-if="success">  Message sent succesully !! </span>  
+            <form ref="form" @submit.prevent="sendEmail">
               <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="single-input-field">
-                  <input type="text" placeholder="Your Name" name="name"/>
+                <div class="single-input-field  ">
+                  <input  class="border" v-model="$v.name.$model" type="text" placeholder="Your Name" :class="{ 'is-invalid': $v.name.$error }" name="name"/>
+                 <div v-if="$v.name.$error" class="invalid-feedback">
+                  <span v-if="!$v.name.required">name is required</span>
                 </div>
+                 
+            </div>
+              
               </div>  
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="single-input-field">
-                  <input type="email" placeholder="E-mail" name="email" required/>
+                <div class="single-input-field ">
+                  <input class="border"  v-model="$v.email.$model" type="email" placeholder="E-mail" :class="{ 'is-invalid': $v.email.$error }" name="email" required/>
+                   <div v-if="$v.email.$error" class="invalid-feedback">
+              <span v-if="!$v.email.required">Email is required</span>
+              <span v-if="!$v.email.email">Email is invalid</span>
+            </div>
                 </div>
               </div>                              
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="single-input-field">
-                  <input type="text" placeholder="Phone Number" name="phone"/>
+                <div class="single-input-field ">
+                  <input class="border"  v-model="$v.phone.$model" type="text" placeholder="Phone Number" :class="{ 'is-invalid': $v.phone.$error }" name="phone"/>
+                  <div v-if="$v.phone.$error" class="invalid-feedback">
+              <span v-if="!$v.phone.required"
+                >phone number is required</span
+              >
+              <span v-if="!$v.phone.minLength"
+                >phone number min length is 10</span
+              >
+              <span v-if="!$v.phone.maxLength"
+                >phone number max length is 10</span
+              >
+            </div>
                 </div>
               </div>  
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="single-input-field">
-                  <input type="text" placeholder="Subject" name="subject"/>
+                <div class="single-input-field  ">
+                  <input class="border"  v-model="$v.subject.$model" type="text" placeholder="Subject" :class="{ 'is-invalid': $v.subject.$error}" name="subject"/>
+                     <div v-if="$v.subject.$error" class="invalid-feedback">
+              <span v-if="!$v.subject.required"
+                >subject is required</span
+              >
+              <span v-if="!$v.subject.minLength"
+                >subject min length is 10</span
+              >
+              <span v-if="!$v.subject.maxLength"
+                >subject max length is 60</span
+              >
+            </div>
                 </div>
               </div>                
               <div class="col-md-12 message-input">
-                <div class="single-input-field">
-                  <textarea  placeholder="Write Your Message" name="message"></textarea>
+                <div class="single-input-field mt-2 ">
+                  <textarea class="border" v-model="$v.message.$model" placeholder="Write Your Message" :class="{ 'is-invalid': $v.message.$error }" name="message"></textarea>
+                           <div v-if="$v.message.$error" class="invalid-feedback">
+            
+              <span v-if="!$v.message.minLength"
+                >message min length is 30</span
+              >
+            
+            </div>
                 </div>
               </div>                                                
-              <div class="single-input-fieldsbtn">
-                <input type="submit" value="Send Now"/>
-              </div>                          
+                <button
+              class="float-left mt-2 btn btn-danger"
+              type="submit"
+              :disabled="isLoading|| $v.$anyError "
+            >
+              send <b-spinner small v-if="isLoading"></b-spinner>
+            </button>                       
             </div>
+            
+            <span class="alert alert-danger" v-if="error">there is an error !!</span>
             </form>   
           </div>      
         </div>
@@ -100,7 +145,80 @@
 		</div>
 </template>
 <script>
-export default {};
+import emailjs from "@emailjs/browser";
+import {
+  required,
+  email,
+  minLength,
+  maxLength,
+} from "vuelidate/lib/validators";
+
+export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+      subject: "",
+      success: false,
+      error: false,
+      isLoading: false,
+    };
+  },
+  validations: {
+    name: {
+      required,
+      minLength: minLength(3),
+    },
+    email: {
+      required,
+      email,
+    },
+    phone: {
+      required,
+      minLength: minLength(10),
+      maxLength: maxLength(10),
+    },
+    subject: {
+      required,
+      minLength: minLength(10),
+      maxLength: maxLength(60),
+    },
+    message: {
+      required,
+      minLength: minLength(30),
+    },
+  },
+
+  methods: {
+    sendEmail() {
+      this.message = "";
+      (this.isLoading = true),
+        emailjs
+          .sendForm(
+            "service_uq15y5i",
+            "template_u6isjoq",
+            this.$refs.form,
+            "user_XAKEAr5PB8A9JopoaJ2w9"
+          )
+          .then(
+            (result) => {
+              this.success = true;
+              console.log("SUCCESS!", result.text);
+            },
+            (error) => {
+              this.error = true;
+              console.log("FAILED...", error.text);
+            }
+          )
+          .then(() => {
+            this.isLoading = false;
+            this.$refs.form.reset();
+          });
+    },
+  },
+};
 </script>
 <style  >
 .contact-image {
