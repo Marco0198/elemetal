@@ -55,7 +55,7 @@
         <div class="col-md-8">
           <div class="contact-page-form" >
             <h3 class=" mb-3">Get in Touch</h3> 
-            <span class="alert alert-success mt-3 " v-if="success">  Message sent succesully !! </span>  
+            <span class="alert alert-success mt-3 " v-if="success">  Message sent succefully !! </span>  
             <form ref="form" @submit.prevent="sendEmail">
               <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-12">
