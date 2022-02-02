@@ -3,6 +3,7 @@
     <div class="copyright text-center">© {{ year }}</div>
   </footer>
 </template>
+
 <script>
 export default {
   data() {
