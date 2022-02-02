@@ -136,7 +136,8 @@
         </div>
         <div class="col-md-4">        
           <div class="contact-page-map">
-            <iframe src="https://www.google.com/maps/@-33.9192488,18.4250213,3a,75y,71.82h,84.84t,1.56r/data=!3m6!1e1!3m4!1s1kBdJ08IbJZKmYMbxv6LLQ!2e0!7i13312!8i6656!5m1!1e4" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13243.402788471383!2d18.4250213173703!3d-33.91924200915353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc6761a2419367%3A0x3f1d61e79628bf94!2s8%20Hans%20Strijdom%20Ave%2C%20Cape%20Town%20City%20Centre%2C%20Cape%20Town%2C%208000!5e0!3m2!1sen!2sza!4v1643832089770!5m2!1sen!2sza"  height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
           </div>          
         </div>        
       </div>
@@ -153,7 +154,9 @@ import {
   maxLength,
 } from "vuelidate/lib/validators";
 
+
 export default {
+
   data() {
     return {
       name: "",
@@ -164,6 +167,7 @@ export default {
       success: false,
       error: false,
       isLoading: false,
+
     };
   },
   validations: {

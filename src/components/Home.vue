@@ -1,6 +1,5 @@
 <template lang="">
-    <div>
-     
+  <div>
     <div class="row-hero">
       <video
         class="video"
@@ -20,13 +19,12 @@
         </div>
       </div>
     </div>
-   
-    </div>
+  </div>
 </template>
 <script>
 export default {};
 </script>
-<style >
+<style>
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap");
 body {
   margin: 0;
@@ -61,7 +59,7 @@ body {
 }
 
 .video-quote {
-  padding-top: 250px;
+  padding-top: 200px;
   width: 100%;
   height: 85%;
   color: white;
