@@ -1,22 +1,22 @@
 <template>
-  <div>
-    <TheNavBar />
-    <Home />
+  <Layout name="LayoutDefault">
+    <div>
+     <Home />
     <About />
     <Service />
     <Contact />
-    <TheFooter />
-  </div>
+    </div>
+  </Layout>
 </template>
 <script>
-import TheNavBar from "@/components/layouts/TheNavBar.vue";
 import Service from "@/components/Service.vue";
 import Home from "@/components/Home.vue";
 import Contact from "@/components/Contact.vue";
 import About from "@/components/About.vue";
-import TheFooter from "@/components/layouts/TheFooter.vue";
+import Layout from "@/layouts/Layout";
+
 export default {
-  components: { TheNavBar, Service, Contact, TheFooter, About, Home },
+  components: {  Service,Layout, Contact, About, Home },
 };
 </script>
 
