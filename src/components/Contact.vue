@@ -235,30 +235,29 @@ export default {
 
   methods: {
     sendEmail() {
-      // this.message = "";
-      // (this.isLoading = true),
-      //   emailjs
-      //     .sendForm(
-      //       "service_uq15y5i",
-      //       "template_u6isjoq",
-      //       this.$refs.form,
-      //       "user_XAKEAr5PB8A9JopoaJ2w9"
-      //     )
-      //     .then(
-      //       (result) => {
-      //         this.success = true;
-      //         console.log("SUCCESS!", result.text);
-      //       },
-      //       (error) => {
-      //         this.error = true;
-      //         console.log("FAILED...", error.text);
-      //       }
-      //     )
-      //     .then(() => {
-      //       this.isLoading = false;
-      //       this.$refs.form.reset();
-      //     });
-      alert("please note that this feature is under constraction use the provided email to get in touch thanks")
+      this.message = "";
+      (this.isLoading = true),
+        emailjs
+          .sendForm(
+            "service_uq15y5i",
+            "template_u6isjoq",
+            this.$refs.form,
+            "user_XAKEAr5PB8A9JopoaJ2w9"
+          )
+          .then(
+            (result) => {
+              this.success = true;
+              console.log("SUCCESS!", result.text);
+            },
+            (error) => {
+              this.error = true;
+              console.log("FAILED...", error.text);
+            }
+          )
+          .then(() => {
+            this.isLoading = false;
+            this.$refs.form.reset();
+          });
     },
   },
 };
