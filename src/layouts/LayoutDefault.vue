@@ -26,7 +26,7 @@ export default {
 <style >
 .LayoutDefault__main{
   justify-content :center;
-  margin-top: 100px;
+  margin-top: -50px;
   text-align: center;
   min-height:800px;
  background-attachment: fixed;

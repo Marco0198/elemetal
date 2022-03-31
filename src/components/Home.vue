@@ -14,7 +14,7 @@
       </video>
       <div class="video-quote">
         <div class="home cointainer lead">
-          <h2>Welcome to Kieltec</h2>
+          <h1>Welcome to Kieltec</h1>
           <p>I'm here to repair</p>
         </div>
       </div>
@@ -25,7 +25,6 @@
 export default {};
 </script>
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap");
 body {
   margin: 0;
   padding: 0;
