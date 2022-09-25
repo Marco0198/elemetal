@@ -1,14 +1,14 @@
 <template>
   <Layout name="LayoutDefault">
 
-    <Contact />
+    <contact-page-component />
 
   </Layout>
 </template>
 <script>
 import Layout from "@/layouts/Layout";
-import Contact from "@/components/Contact.vue"
+import ContactPageComponent from '../components/ContactPageComponent.vue';
 export default {
-  components: { Layout,Contact },
+  components: { Layout,ContactPageComponent },
 };
 </script>

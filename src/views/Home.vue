@@ -1,23 +1,28 @@
 <template>
   <Layout name="LayoutDefault">
     <div>
-     <Home />
-    <About />
-    <Service />
-    <Contact />
+     <app-accordion>
+
+    </app-accordion>
+    
     </div>
   </Layout>
 </template>
 <script>
-import Service from "@/components/Service.vue";
-import Home from "@/components/Home.vue";
-import Contact from "@/components/Contact.vue";
-import About from "@/components/About.vue";
-import Layout from "@/layouts/Layout";
 
+//import HomePageComponent from "@/components/HomePageComponent.vue";
+import Layout from "@/layouts/Layout";
+import AppAccordion from "@/components/AppAccordion";
+
+import { required, email, minLength } from "vuelidate/lib/validators";
+
+import axios from "axios";
 export default {
-  components: {  Service,Layout, Contact, About, Home },
-};
+  components: {  Layout,AppAccordion },
+
+  
+
+}
 </script>
 
 
